@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse through GELC's historical events, photo galleries, and downloadable resources from past carnivals.">
+    <title>Archive - GELC | Gregorian English Language Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span>GELC</span> | Gregorian English Language Club
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="archive.html" class="active">Archive</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Register</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="height: 50vh; min-height: 350px;">
+        <div class="hero-content">
+            <h1>Event Archive</h1>
+            <p class="subtitle">A chronicle of creativity, competition, and community</p>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" style="background-color: var(--light-gray);">
+        <div class="container">
+            <h2 class="section-title">Event Gallery</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem;">Relive the memorable moments from our carnivals through this visual journey.</p>
+            
+            <!-- Gallery Categories -->
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <button class="btn btn-outline" style="margin: 0.5rem;" onclick="filterGallery('all')">All</button>
+                <button class="btn btn-outline" style="margin: 0.5rem;" onclick="filterGallery('ceremonies')">Ceremonies</button>
+                <button class="btn btn-outline" style="margin: 0.5rem;" onclick="filterGallery('workshops')">Workshops</button>
+                <button class="btn btn-outline" style="margin: 0.5rem;" onclick="filterGallery('winners')">Winners</button>
+                <button class="btn btn-outline" style="margin: 0.5rem;" onclick="filterGallery('performances')">Performances</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="ceremonies">
+                    <img src="Gallery/4114eb36-45dd-481c-924b-793596787c11.JPG" alt="GELC Event Ceremony" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="gallery-item" data-category="winners">
+                    <img src="Gallery/ad47ef37-c156-4222-a310-8578cc84b34e.JPG" alt="GELC Event Winners" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="gallery-item" data-category="performances">
+                    <img src="Gallery/75cec59b-7443-4530-af4e-04885394c4a5.JPG" alt="GELC Event Performance" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="gallery-item" data-category="workshops">
+                    <img src="Gallery/70f07067-3fe5-4985-8d8f-b5c93d0602d2.JPG" alt="GELC Workshop" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="gallery-item" data-category="ceremonies">
+                    <img src="Gallery/e87b6a7a-4431-4452-9ab3-78a481e0c762.JPG" alt="GELC Event Ceremony" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="gallery-item" data-category="winners">
+                    <img src="Gallery/4c21d211-0c31-44d2-8b4c-4fc66e8b01f2.JPG" alt="GELC Event Winners" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="gallery-item" data-category="performances">
+                    <img src="Gallery/8860dca2-d842-4dbf-830f-cfa69949d78b.JPG" alt="GELC Event Performance" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="gallery-item" data-category="workshops">
+                    <img src="Gallery/41005c1a-1bba-4659-baf7-b0001f125861.JPG" alt="GELC Workshop" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="gallery-item" data-category="ceremonies">
+                    <img src="Gallery/b2debd07-026f-43bc-8b3a-398a5c21fa1a.JPG" alt="GELC Event Ceremony" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="gallery-item" data-category="winners">
+                    <img src="Gallery/0601f81f-addd-4689-a629-f5efc57e4264.JPG" alt="GELC Event Winners" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="gallery-item" data-category="performances">
+                    <img src="Gallery/3e17e90a-891a-4a30-b303-569165d4d19d.JPG" alt="GELC Event Performance" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="gallery-item" data-category="workshops">
+                    <img src="Gallery/6017a197-4b7a-462a-9f62-495465fa9114.JPG" alt="GELC Workshop" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="gallery-item" data-category="ceremonies">
+                    <img src="Gallery/83b9fee5-854f-40d2-953f-e62cc437f08a.JPG" alt="GELC Event Ceremony" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="gallery-item" data-category="winners">
+                    <img src="Gallery/36c8b263-013b-46b3-b624-d5131b816cf4.JPG" alt="GELC Event Winners" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="gallery-item" data-category="performances">
+                    <img src="Gallery/dbd3ee94-639c-4352-bd90-5e9544210561.JPG" alt="GELC Event Performance" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="gallery-item" data-category="workshops">
+                    <img src="Gallery/150054cd-ba61-4724-950d-a790b674c325.JPG" alt="GELC Workshop" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="gallery-item" data-category="ceremonies">
+                    <img src="Gallery/DSCF6431.JPG" alt="GELC Event Ceremony" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="gallery-item" data-category="winners">
+                    <img src="Gallery/DSCF6429.JPG" alt="GELC Event Winners" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="gallery-item" data-category="performances">
+                    <img src="Gallery/DSCF6414.JPG" alt="GELC Event Performance" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline View -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Journey Through Time</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 4rem; font-size: 1.1rem;">From humble beginnings to becoming Bangladesh's premier English language carnival, explore the milestones that shaped GELC.</p>
+            
+            <div class="timeline">
+                <!-- 2025 -->
+                <div class="timeline-item">
+                    <h3 class="timeline-year">2025</h3>
+                    <div class="timeline-content">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.5rem;">6th National English Carnival</h4>
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <p style="margin-bottom: 0.75rem;"><strong>📅 Date:</strong> 24–25 October 2025</p>
+                            <p style="margin-bottom: 0.75rem;"><strong>📍 Venue:</strong> St. Gregory's High School & College, Dhaka</p>
+                            <p style="margin-bottom: 0.75rem;"><strong>🎯 Theme:</strong> "Empowering Voices, Inspiring Futures"</p>
+                        </div>
+                        <p>Our most ambitious carnival yet! Featuring 6 major segments including the new Lensathon (Photography) competition. Expected participation from 1,500+ students across 100+ institutions.</p>
+                        <div style="margin-top: 1rem;">
+                            <span style="display: inline-block; background: var(--secondary-teal); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">English Olympiad</span>
+                            <span style="display: inline-block; background: var(--secondary-teal); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">Pop Culture Quiz</span>
+                            <span style="display: inline-block; background: var(--secondary-teal); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">Story Writing</span>
+                            <span style="display: inline-block; background: var(--secondary-teal); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">Squid Game 3</span>
+                            <span style="display: inline-block; background: var(--secondary-teal); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">Treasure Hunt</span>
+                            <span style="display: inline-block; background: var(--secondary-teal); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">Lensathon</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2024 -->
+                <div class="timeline-item">
+                    <h3 class="timeline-year">2024</h3>
+                    <div class="timeline-content">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.5rem;">Intra-English Language Festival</h4>
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <p style="margin-bottom: 0.75rem;"><strong>📅 Date:</strong> March 2024</p>
+                            <p style="margin-bottom: 0.75rem;"><strong>📍 Venue:</strong> St. Gregory's Campus</p>
+                            <p style="margin-bottom: 0.75rem;"><strong>🎯 Theme:</strong> "Celebrating Our Own"</p>
+                        </div>
+                        <p>A special in-house carnival exclusively for Gregorian students across all grades. Featured inclusive challenges designed to encourage participation from every student, regardless of skill level. Over 600 Gregorians participated, making it the largest internal event in school history.</p>
+                        <div style="margin-top: 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                            <div style="background: white; padding: 1rem; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">600+</div>
+                                <div style="font-size: 0.9rem; color: var(--dark-gray);">Participants</div>
+                            </div>
+                            <div style="background: white; padding: 1rem; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">8</div>
+                                <div style="font-size: 0.9rem; color: var(--dark-gray);">Competition Segments</div>
+                            </div>
+                            <div style="background: white; padding: 1rem; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">5</div>
+                                <div style="font-size: 0.9rem; color: var(--dark-gray);">Grade Categories</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2023 -->
+                <div class="timeline-item">
+                    <h3 class="timeline-year">2023</h3>
+                    <div class="timeline-content">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.5rem;">5th National English Carnival</h4>
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <p style="margin-bottom: 0.75rem;"><strong>📅 Date:</strong> 15–16 December 2023</p>
+                            <p style="margin-bottom: 0.75rem;"><strong>📍 Venue:</strong> St. Gregory's High School & College</p>
+                            <p style="margin-bottom: 0.75rem;"><strong>🎯 Theme:</strong> "Bridging Creativity and Language Mastery"</p>
+                        </div>
+                        <p>A landmark event that brought together over 1,200 participants from 80+ institutions. Introduced the wildly popular Squid Game segment and expanded our reach to districts outside Dhaka. The carnival featured special guest speakers, cultural performances, and extensive media coverage.</p>
+                        <div style="margin-top: 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                            <div style="background: white; padding: 1rem; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">1,200+</div>
+                                <div style="font-size: 0.9rem; color: var(--dark-gray);">Participants</div>
+                            </div>
+                            <div style="background: white; padding: 1rem; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">80+</div>
+                                <div style="font-size: 0.9rem; color: var(--dark-gray);">Institutions</div>
+                            </div>
+                            <div style="background: white; padding: 1rem; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">7</div>
+                                <div style="font-size: 0.9rem; color: var(--dark-gray);">Major Segments</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2022 -->
+                <div class="timeline-item">
+                    <h3 class="timeline-year">2022</h3>
+                    <div class="timeline-content">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.5rem;">4th National English Carnival</h4>
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <p style="margin-bottom: 0.75rem;"><strong>📅 Date:</strong> November 2022</p>
+                            <p style="margin-bottom: 0.75rem;"><strong>📍 Venue:</strong> St. Gregory's High School & College</p>
+                            <p style="margin-bottom: 0.75rem;"><strong>🎯 Theme:</strong> "The Rebirth of Creativity"</p>
+                        </div>
+                        <p>GELC's triumphant return to in-person events post-pandemic. This carnival marked a fresh start, bringing back the energy, excitement, and face-to-face interactions students had been missing. Featured enhanced safety protocols while maintaining the carnival's signature vibrant atmosphere.</p>
+                    </div>
+                </div>
+
+                <!-- 2020 -->
+                <div class="timeline-item">
+                    <h3 class="timeline-year">2020</h3>
+                    <div class="timeline-content">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.5rem;">3rd National English Carnival</h4>
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <p style="margin-bottom: 0.75rem;"><strong>📅 Date:</strong> January 2020</p>
+                            <p style="margin-bottom: 0.75rem;"><strong>📍 Venue:</strong> St. Gregory's High School & College</p>
+                            <p style="margin-bottom: 0.75rem;"><strong>🎯 Theme:</strong> "English in the Digital Age"</p>
+                        </div>
+                        <p>The last major pre-pandemic carnival. Introduced digital elements and multimedia competitions. Set the foundation for what would become GELC's signature blend of traditional language mastery and contemporary cultural trends.</p>
+                    </div>
+                </div>
+
+                <!-- Earlier Years -->
+                <div class="timeline-item">
+                    <h3 class="timeline-year">2018-2019</h3>
+                    <div class="timeline-content">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.5rem;">Foundation Years</h4>
+                        <p>The inaugural National English Carnivals (1st & 2nd editions) laid the groundwork for GELC's future success. These pioneering events established our core values of inclusivity, creativity, and excellence. Started with 300+ participants and grew exponentially year after year.</p>
+                        <div style="margin-top: 1rem; background: white; padding: 1.5rem; border-radius: 8px;">
+                            <p style="margin: 0;"><strong>Key Achievements:</strong> Established GELC as a recognized name in Dhaka's educational community, created partnerships with multiple schools, and set the template for future carnivals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Downloadable Resources -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Downloadable Resources</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem;">Access important documents, guidelines, and media kits from our archives.</p>
+            
+            <div class="card-grid">
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 4rem; color: var(--primary-blue); margin-bottom: 1rem;">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Event Rulebook 2025</h3>
+                    <p style="margin-bottom: 1.5rem;">Complete guidelines and rules for all segments of the 6th National English Carnival.</p>
+                    <a href="#" class="btn btn-primary" onclick="alert('Download functionality to be implemented')">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 4rem; color: var(--secondary-teal); margin-bottom: 1rem;">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Campus Ambassador Guidelines</h3>
+                    <p style="margin-bottom: 1.5rem;">Everything you need to know about becoming and serving as a GELC Campus Ambassador.</p>
+                    <a href="#" class="btn btn-primary" onclick="alert('Download functionality to be implemented')">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 4rem; color: var(--accent-gold); margin-bottom: 1rem;">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Media Kit</h3>
+                    <p style="margin-bottom: 1.5rem;">Official logos, brand colors, typography guidelines, and promotional materials for partners and media.</p>
+                    <a href="#" class="btn btn-primary" onclick="alert('Download functionality to be implemented')">
+                        <i class="fas fa-download"></i> Download ZIP
+                    </a>
+                </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Over Years -->
+    <section class="section" style="background-color: var(--light-gray);">
+        <div class="container">
+            <h2 style="color: var(--primary-blue); text-align: center; margin-bottom: 3rem;">Growth Over the Years</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card" style="background: white; box-shadow: 0 4px 20px var(--shadow); padding: 2rem; text-align: center;">
+                    <span class="stat-number" style="color: #1e40af; font-size: 3rem; font-weight: 800; display: block; margin-bottom: 0.5rem;">6</span>
+                    <span class="stat-label" style="color: #374151; font-size: 1.1rem; font-weight: 600;">National Carnivals Organized</span>
+                </div>
+                <div class="stat-card" style="background: white; box-shadow: 0 4px 20px var(--shadow); padding: 2rem; text-align: center;">
+                    <span class="stat-number" style="color: #1e40af; font-size: 3rem; font-weight: 800; display: block; margin-bottom: 0.5rem;">5,000+</span>
+                    <span class="stat-label" style="color: #374151; font-size: 1.1rem; font-weight: 600;">Total Participants</span>
+                </div>
+                <div class="stat-card" style="background: white; box-shadow: 0 4px 20px var(--shadow); padding: 2rem; text-align: center;">
+                    <span class="stat-number" style="color: #1e40af; font-size: 3rem; font-weight: 800; display: block; margin-bottom: 0.5rem;">100+</span>
+                    <span class="stat-label" style="color: #374151; font-size: 1.1rem; font-weight: 600;">Partner Institutions</span>
+                </div>
+                <div class="stat-card" style="background: white; box-shadow: 0 4px 20px var(--shadow); padding: 2rem; text-align: center;">
+                    <span class="stat-number" style="color: #1e40af; font-size: 3rem; font-weight: 800; display: block; margin-bottom: 0.5rem;">7</span>
+                    <span class="stat-label" style="color: #374151; font-size: 1.1rem; font-weight: 600;">Years of Excellence</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>About GELC</h4>
+                    <p>The Gregorian English Language Club is dedicated to fostering language excellence, creative expression, and cultural exchange among students across Bangladesh.</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/GELC01" target="_blank" class="social-icon" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" target="_blank" class="social-icon" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank" class="social-icon" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <p><a href="about.html">About Us</a></p>
+                    <p><a href="events.html">Events</a></p>
+                    <p><a href="archive.html">Archive</a></p>
+                    <p><a href="partners.html">Our Partners</a></p>
+                    <p><a href="contact.html">Contact</a></p>
+                </div>
+                <div>
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> St. Gregory's High School & College<br>Dhaka, Bangladesh</p>
+                    <p><i class="fas fa-phone"></i> +8801830691808</p>
+                    <p><i class="fas fa-envelope"></i> gregorianclub@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gregorian English Language Club (GELC). All rights reserved.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">In collaboration with St. Gregory's High School & College & The Gregorian Society</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

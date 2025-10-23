@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register for GELC events or submit your queries. Join the 6th National English Carnival 2025.">
+    <title>Register - GELC | Gregorian English Language Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span>GELC</span> | Gregorian English Language Club
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="archive.html">Archive</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html" class="active btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Register</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="height: 50vh; min-height: 350px;">
+        <div class="hero-content">
+            <h1>Register Now</h1>
+            <p class="subtitle">Join the 6th National English Carnival 2025 or submit your queries</p>
+        </div>
+    </section>
+
+    <!-- Registration Tabs -->
+    <section class="section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <button class="btn btn-primary" onclick="showSection('event')" id="eventBtn" style="margin: 0.5rem;">Event Registration</button>
+                <button class="btn btn-outline" onclick="showSection('ambassador')" id="ambassadorBtn" style="margin: 0.5rem;">Campus Ambassador</button>
+                <button class="btn btn-outline" onclick="showSection('query')" id="queryBtn" style="margin: 0.5rem;">General Query</button>
+            </div>
+
+            <!-- Event Registration Section -->
+            <div id="eventSection" class="registration-section">
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <div style="text-align: center; margin-bottom: 3rem;">
+                        <h2 style="color: var(--primary-blue); margin-bottom: 1rem;">6th National English Carnival 2025</h2>
+                        <div style="display: inline-block; background: linear-gradient(135deg, var(--primary-blue), var(--secondary-teal)); color: white; padding: 1.5rem 2rem; border-radius: 12px; margin-bottom: 1rem;">
+                            <p style="margin: 0; font-size: 1.2rem;"><i class="fas fa-calendar"></i> <strong>24–25 October 2025</strong></p>
+                            <p style="margin: 0.5rem 0 0 0; font-size: 1rem;"><i class="fas fa-map-marker-alt"></i> St. Gregory's High School & College, Dhaka</p>
+                        </div>
+                        <p style="font-size: 1.05rem; color: var(--dark-gray); margin-top: 1rem;">✨ Free entry for all segments | ✨ Certificates for all participants | ✨ Exciting prizes</p>
+                    </div>
+
+                    <div class="card" style="padding: 3rem;">
+                        <form id="eventRegistrationForm">
+                            <h3 style="color: var(--primary-blue); margin-bottom: 2rem; text-align: center;">Registration Form</h3>
+                            
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="institution">Institution / School / College *</label>
+                                <input type="text" id="institution" name="institution" required placeholder="Your school or college name">
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                                <div class="form-group">
+                                    <label for="category">Category *</label>
+                                    <select id="category" name="category" required>
+                                        <option value="">Select your category</option>
+                                        <option value="kid">Kid (Class 1-3)</option>
+                                        <option value="primary">Primary (Class 4-5)</option>
+                                        <option value="junior">Junior (Class 6-8)</option>
+                                        <option value="secondary">Secondary (Class 9-10)</option>
+                                        <option value="higher-secondary">Higher Secondary (Class 11-12)</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="grade">Current Grade/Class *</label>
+                                    <input type="text" id="grade" name="grade" required placeholder="e.g., Class 10">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Segments (Select all that apply) *</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="olympiad" name="segments" value="olympiad">
+                                        <label for="olympiad">English Olympiad</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="popquiz" name="segments" value="popquiz">
+                                        <label for="popquiz">Pop Culture Quiz</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="story" name="segments" value="story">
+                                        <label for="story">Instant Story Writing</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="squidgame" name="segments" value="squidgame">
+                                        <label for="squidgame">Squid Game 3</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="treasure" name="segments" value="treasure">
+                                        <label for="treasure">Treasure Hunt</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="lensathon" name="segments" value="lensathon">
+                                        <label for="lensathon">Lensathon (Photography)</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                                <div class="form-group">
+                                    <label for="contactNumber">Contact Number *</label>
+                                    <input type="tel" id="contactNumber" name="contactNumber" required placeholder="+880">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="emailAddress">Email Address *</label>
+                                    <input type="email" id="emailAddress" name="emailAddress" required placeholder="your.email@example.com">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="teamMembers">Team Members (if participating in team events)</label>
+                                <textarea id="teamMembers" name="teamMembers" rows="3" placeholder="List team member names (for Squid Game 3, Pop Culture Quiz, Treasure Hunt)"></textarea>
+                                <p style="font-size: 0.9rem; color: var(--dark-gray); margin-top: 0.5rem;">
+                                    <i class="fas fa-info-circle"></i> For team events: Squid Game requires 5-7 members, other team events require 3-5 members.
+                                </p>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="specialRequirements">Special Requirements / Dietary Restrictions (Optional)</label>
+                                <textarea id="specialRequirements" name="specialRequirements" rows="2" placeholder="Any special accommodations needed?"></textarea>
+                            </div>
+
+                            <div class="form-group" style="background: var(--light-gray); padding: 1.5rem; border-radius: 8px;">
+                                <div style="display: flex; align-items: start; gap: 0.75rem;">
+                                    <input type="checkbox" id="terms" name="terms" required style="width: auto; margin-top: 0.25rem;">
+                                    <label for="terms" style="margin: 0; font-size: 0.95rem;">
+                                        I agree to the terms and conditions of the event and confirm that all information provided is accurate. I understand that GELC reserves the right to verify information and may contact me for further details.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div style="text-align: center; margin-top: 2.5rem;">
+                                <button type="submit" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 3rem;">
+                                    <i class="fas fa-check-circle"></i> Submit Registration
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: var(--light-gray); border-radius: 12px;">
+                        <p style="margin: 0; font-size: 1rem;"><i class="fas fa-envelope"></i> Registration confirmation will be sent to your email within 48 hours.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campus Ambassador Section -->
+            <div id="ambassadorSection" class="registration-section" style="display: none;">
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <div style="text-align: center; margin-bottom: 3rem;">
+                        <h2 style="color: var(--primary-blue); margin-bottom: 1rem;">Become a Campus Ambassador</h2>
+                        <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto;">Join our network of passionate student leaders who promote GELC events and inspire participation at their institutions.</p>
+                    </div>
+
+                    <!-- Benefits -->
+                    <div class="card-grid" style="margin-bottom: 3rem;">
+                        <div class="card" style="text-align: center; padding: 2rem;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+                            <h4>Build Your Network</h4>
+                            <p style="font-size: 0.95rem;">Connect with students nationwide</p>
+                        </div>
+                        <div class="card" style="text-align: center; padding: 2rem;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🌟</div>
+                            <h4>Leadership Skills</h4>
+                            <p style="font-size: 0.95rem;">Develop event coordination abilities</p>
+                        </div>
+                        <div class="card" style="text-align: center; padding: 2rem;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🎁</div>
+                            <h4>Exclusive Perks</h4>
+                            <p style="font-size: 0.95rem;">Certificates, merchandise & more</p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="padding: 3rem;">
+                        <form id="ambassadorForm">
+                            <h3 style="color: var(--primary-blue); margin-bottom: 2rem; text-align: center;">Ambassador Application</h3>
+                            
+                            <div class="form-group">
+                                <label for="ambName">Full Name *</label>
+                                <input type="text" id="ambName" name="ambName" required placeholder="Enter your full name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ambInstitution">Institution / School / College *</label>
+                                <input type="text" id="ambInstitution" name="ambInstitution" required placeholder="Your school or college name">
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                                <div class="form-group">
+                                    <label for="ambGrade">Current Grade/Class *</label>
+                                    <input type="text" id="ambGrade" name="ambGrade" required placeholder="e.g., Class 11">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="ambAge">Age *</label>
+                                    <input type="number" id="ambAge" name="ambAge" required placeholder="Your age" min="13" max="25">
+                                </div>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                                <div class="form-group">
+                                    <label for="ambPhone">Contact Number *</label>
+                                    <input type="tel" id="ambPhone" name="ambPhone" required placeholder="+880">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="ambEmail">Email Address *</label>
+                                    <input type="email" id="ambEmail" name="ambEmail" required placeholder="your.email@example.com">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="socialMedia">Social Media Handles (Facebook / Instagram)</label>
+                                <input type="text" id="socialMedia" name="socialMedia" placeholder="@yourhandle or profile link">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="motivation">Why do you want to be a Campus Ambassador? *</label>
+                                <textarea id="motivation" name="motivation" required rows="4" placeholder="Tell us about your motivation, leadership experience, and how you plan to promote GELC at your institution..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="experience">Previous Experience (clubs, events, leadership roles)</label>
+                                <textarea id="experience" name="experience" rows="3" placeholder="Share any relevant experience in organizing events, leading clubs, or promoting activities..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="availability">Weekly Availability (hours per week) *</label>
+                                <select id="availability" name="availability" required>
+                                    <option value="">Select your availability</option>
+                                    <option value="2-4">2-4 hours per week</option>
+                                    <option value="5-7">5-7 hours per week</option>
+                                    <option value="8-10">8-10 hours per week</option>
+                                    <option value="10+">10+ hours per week</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group" style="background: var(--light-gray); padding: 1.5rem; border-radius: 8px;">
+                                <div style="display: flex; align-items: start; gap: 0.75rem;">
+                                    <input type="checkbox" id="ambTerms" name="ambTerms" required style="width: auto; margin-top: 0.25rem;">
+                                    <label for="ambTerms" style="margin: 0; font-size: 0.95rem;">
+                                        I commit to representing GELC professionally, promoting events at my institution, and fulfilling ambassador responsibilities. I understand this is a volunteer position.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div style="text-align: center; margin-top: 2.5rem;">
+                                <button type="submit" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 3rem;">
+                                    <i class="fas fa-paper-plane"></i> Submit Application
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: var(--light-gray); border-radius: 12px;">
+                        <p style="margin: 0; font-size: 1rem;"><i class="fas fa-clock"></i> Applications are reviewed within 5-7 business days. Selected candidates will be contacted for an interview.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- General Query Section -->
+            <div id="querySection" class="registration-section" style="display: none;">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div style="text-align: center; margin-bottom: 3rem;">
+                        <h2 style="color: var(--primary-blue); margin-bottom: 1rem;">Have a Question?</h2>
+                        <p style="font-size: 1.1rem;">We're here to help! Ask us anything about GELC, our events, or how to get involved.</p>
+                    </div>
+
+                    <div class="card" style="padding: 3rem;">
+                        <form id="queryForm">
+                            <div class="form-group">
+                                <label for="queryName">Full Name *</label>
+                                <input type="text" id="queryName" name="queryName" required placeholder="Enter your name">
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                                <div class="form-group">
+                                    <label for="queryEmail">Email Address *</label>
+                                    <input type="email" id="queryEmail" name="queryEmail" required placeholder="your.email@example.com">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="queryPhone">Phone Number (Optional)</label>
+                                    <input type="tel" id="queryPhone" name="queryPhone" placeholder="+880">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="queryInstitution">Institution (Optional)</label>
+                                <input type="text" id="queryInstitution" name="queryInstitution" placeholder="Your school, college, or organization">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="queryType">Query Type *</label>
+                                <select id="queryType" name="queryType" required>
+                                    <option value="">Select query type</option>
+                                    <option value="event-details">Event Details</option>
+                                    <option value="registration">Registration Process</option>
+                                    <option value="partnership">Partnership Opportunity</option>
+                                    <option value="sponsorship">Sponsorship</option>
+                                    <option value="volunteer">Volunteer Opportunity</option>
+                                    <option value="media">Media & Press</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="queryMessage">Your Message *</label>
+                                <textarea id="queryMessage" name="queryMessage" required rows="6" placeholder="Tell us what you'd like to know..."></textarea>
+                            </div>
+
+                            <div style="text-align: center; margin-top: 2rem;">
+                                <button type="submit" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 3rem;">
+                                    <i class="fas fa-paper-plane"></i> Submit Query
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: var(--light-gray); border-radius: 12px;">
+                        <p style="margin: 0 0 0.5rem 0; font-size: 1rem;"><strong>Need immediate assistance?</strong></p>
+                        <p style="margin: 0; font-size: 0.95rem;">
+                            <i class="fas fa-phone"></i> Call: +8801830691808 | 
+                            <i class="fas fa-envelope"></i> Email: gregorianclub@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Information -->
+    <section class="section" style="background-color: var(--light-gray);">
+        <div class="container">
+            <h2 class="section-title">Important Information</h2>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-info-circle" style="color: var(--accent-gold);"></i>
+                        Registration Deadline
+                    </h4>
+                    <p>All registrations must be submitted by <strong>20 October 2025</strong>. Late registrations may not be accepted due to limited capacity.</p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-ticket-alt" style="color: var(--accent-gold);"></i>
+                        No Registration Fee
+                    </h4>
+                    <p>All segments are <strong>completely free</strong>. If anyone asks for payment, please report it to us immediately.</p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-envelope-open-text" style="color: var(--accent-gold);"></i>
+                        Confirmation Email
+                    </h4>
+                    <p>You'll receive a confirmation email within 48 hours with your registration details and further instructions.</p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-users" style="color: var(--accent-gold);"></i>
+                        Team Events
+                    </h4>
+                    <p>For team events, only one member needs to register with all team members' names. All team members must be from the same institution.</p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-id-card" style="color: var(--accent-gold);"></i>
+                        ID Card Required
+                    </h4>
+                    <p>Bring your school/college ID card on event day for verification. Without proper ID, entry may be denied.</p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-question-circle" style="color: var(--accent-gold);"></i>
+                        Have Questions?
+                    </h4>
+                    <p>Visit our <a href="contact.html" style="color: var(--secondary-teal); font-weight: 600;">Contact Page</a> or check the FAQ section for more information.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>About GELC</h4>
+                    <p>The Gregorian English Language Club is dedicated to fostering language excellence, creative expression, and cultural exchange among students across Bangladesh.</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/GELC01" target="_blank" class="social-icon" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" target="_blank" class="social-icon" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank" class="social-icon" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <p><a href="about.html">About Us</a></p>
+                    <p><a href="events.html">Events</a></p>
+                    <p><a href="archive.html">Archive</a></p>
+                    <p><a href="partners.html">Our Partners</a></p>
+                    <p><a href="contact.html">Contact</a></p>
+                </div>
+                <div>
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> St. Gregory's High School & College<br>Dhaka, Bangladesh</p>
+                    <p><i class="fas fa-phone"></i> +8801830691808</p>
+                    <p><i class="fas fa-envelope"></i> gregorianclub@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gregorian English Language Club (GELC). All rights reserved.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">In collaboration with St. Gregory's High School & College & The Gregorian Society</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
